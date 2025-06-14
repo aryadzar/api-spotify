@@ -69,5 +69,8 @@ export async function GET() {
     songUrl: song.item.external_urls.spotify,
   };
 
-  return NextResponse.json(data, { status: 200 });
+  return NextResponse.json(data, { status: 200, headers:{
+      "Access-Control-Allow-Origin": "*", // atau domain tertentu
+      "Content-Type": "application/json",
+  } });
 }
