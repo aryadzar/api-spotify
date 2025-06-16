@@ -13,6 +13,7 @@ const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-pla
 const allowedOrigins = [
   'http://localhost:5173',
   'https://www.aryadzar.my.id',
+  "http://localhost:3000"
 ]
 async function getAccessToken() {
   const response = await fetch(TOKEN_ENDPOINT, {
